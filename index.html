@@ -1,9 +1,42 @@
-<html>
-  <head>
-    <title>Denis Zavershinskiy's personal page</title>
-  </head>
-  <body>
-    <h1>Denis Zavershinskiy's personal page</h1>
-    <h2>Comming soon... Sooner or later...</h2>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Denis Zavershinskiy's personal page</title>
+  <style>
+    #line {
+      border-bottom: solid 1em #0073b1;
+      transition: width 2s;
+      width: 0;
+      margin-top: 1em;
+    }
+
+    #line.load {
+      width: 100%
+    }
+  </style>
+  <script>
+    window.addEventListener('load', function () {
+      const line = document.getElementById('line')
+      line.classList.add('load')
+      line.addEventListener('transitionend', function () {
+        document.getElementById('cv-link').click()
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <h1>Denis Zavershinskiy's personal page</h1>
+  <h2>Coming soon... Sooner or later...</h2>
+  <h2>
+    I'm going to forward you to
+    <a id="cv-link" href="https://www.linkedin.com/in/deniszavershinskiy/">my CV at LinkedIn</a>
+    <div id="line"></div>
+  </h2>
+</body>
+
 </html>
